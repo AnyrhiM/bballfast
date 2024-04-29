@@ -5,14 +5,12 @@ from flask import redirect
 from flask import url_for
 
 from bballfast_constants import TEAM_NAME_TO_ID
-from bballfast_constants import TEAM_ID_TO_NAME
 from bballfast_constants import TEAM_ID_DATA
 from bballfast_constants import CITY_TO_TEAM
 
 import nba_py
 from nba_py.constants import CURRENT_SEASON
 from nba_py.constants import TEAMS
-from nba_py import constants
 from nba_py import game
 from nba_py import player
 from nba_py import team
@@ -26,11 +24,8 @@ import datetime
 import dateutil.parser
 import pytz
 import requests
-import time
 
 from apiclient.discovery import build
-from apiclient.errors import HttpError
-from oauth2client.tools import argparser
 
 from bs4 import BeautifulSoup
 
